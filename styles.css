@@ -1,15 +1,180 @@
+body {
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
 .container-1 {
-    border-style: dotted;
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+
+    h1 {
+        font-family: "Moderustic", serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        color: #d1a7b1;
+    }
+
+    h3 {
+        font-family: "Moderustic", serif;
+        color: #b75875
+    }
+
+    p {
+        font-family: 'Arial', sans-serif;
+        /* Elegante y fácil de leer */
+        font-size: 16px;
+        /* Tamaño de fuente legible */
+        line-height: 1.6;
+        /* Espaciado cómodo entre líneas */
+        color: #4b4b4b;
+        /* Un gris suave para el texto */
+        background-color: #f9f9f9;
+        /* Fondo suave */
+        padding: 10px;
+        /* Espaciado interno alrededor del texto */
+        border-left: 5px solid #d1a7b1;
+        /* Un borde sutil y femenino en el lado izquierdo */
+        margin: 20px 0;
+        /* Márgenes para separar el párrafo */
+        border-radius: 8px;
+        /* Bordes redondeados */
+    }
 }
+
 .container-2 {
-    border-style: dotted;
+    .card-body {
+        border-left: 5px solid #d1a7b1;
+
+        h4 {
+            font-family: "Moderustic", serif;
+            color: #b75875
+        }
+    }
 }
-.container-3 {
-    border-style: dotted;
+
+/* Estilos del encabezado */
+h4 {
+    font-size: 1.5rem;
+    color: #7b7b7b;
+    font-weight: normal;
+    margin-bottom: 10px;
 }
-.container-4 {
-    border-style: dotted;
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3a3a3a;
+    margin-bottom: 20px;
+    text-align: center;
+    letter-spacing: 1px;
 }
-.text {
+
+/* Estilos del párrafo */
+p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para la imagen */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Estilos del botón */
+button {
+    background-color: #f9a5d9;
+    color: white;
+    font-size: 1.1rem;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #f17fa1;
+}
+
+/* Estilo para la disposición en dispositivos pequeños */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+
+    .col-md-6 {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+/* Estilo para todas las columnas de tamaño 4 */
+.col-4 {
     border-style: dotted;
+    background-color: palevioletred;
+    /* Color de fondo para la columna */
+}
+
+/* Asegurarse de que las columnas se alineen correctamente */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* Permite que las columnas se ajusten */
+}
+
+/* Para pantallas pequeñas y medianas */
+@media (max-width: 768px) {
+
+    /* Las columnas deben apilarse en pantallas pequeñas */
+    .row {
+        flex-direction: column;
+        /* Cambiar a columna */
+    }
+
+    /* Asegura que las columnas con fondo se coloquen primero */
+    .col-4 {
+        order: -1;
+        /* La columna con color de fondo irá arriba */
+        width: 100%;
+        /* Hace que ocupe todo el ancho disponible */
+    }
+
+    .col-8 {
+        width: 100%;
+        /* Hace que ocupe todo el ancho disponible */
+    }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 769px) {
+
+    /* Las columnas estarán en fila */
+    .row {
+        flex-direction: row;
+        /* Mantener disposición horizontal en pantallas grandes */
+    }
+
+    /* Las columnas se mantendrán tal cual en pantallas grandes */
+    .col-4 {
+        background-color: palevioletred;
+        /* Color para la columna */
+    }
 }
